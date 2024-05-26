@@ -1,5 +1,5 @@
-group 'yukams.app.background_locator_2'
-version '1.0-SNAPSHOT'
+// group 'yukams.app.background_locator_2'
+// version '1.0-SNAPSHOT'
 
 buildscript {
     ext.kotlin_version = '1.9.24'
@@ -19,6 +19,18 @@ rootProject.allprojects {
         google()
         mavenCentral()
     }
+
+    // subprojects {
+    //     afterEvaluate { project ->
+    //         if (project.hasProperty('android')) {
+    //             project.android {
+    //                 if (namespace == null) {
+    //                     namespace project.group
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 apply plugin: 'com.android.library'
