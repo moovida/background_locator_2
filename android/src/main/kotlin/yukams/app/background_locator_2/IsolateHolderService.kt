@@ -24,6 +24,9 @@ import yukams.app.background_locator_2.provider.*
 import java.util.HashMap
 import androidx.core.app.ActivityCompat
 
+import android.graphics.Color
+import yukams.app.background_locator_2.R
+
 class IsolateHolderService : MethodChannel.MethodCallHandler, LocationUpdateListener, Service() {
     companion object {
         @JvmStatic
