@@ -67,8 +67,13 @@ class IsolateHolderService : MethodChannel.MethodCallHandler, LocationUpdateList
     private var notificationMsg = "Track location in background"
     private var notificationBigMsg =
         "Background location is on to keep the app up-tp-date with your location. This is required for main features to work properly when the app is not running."
-    private var notificationIconColor = 0
-    private var icon = 0
+    
+    private val notificationIconColorHex = "#1976d2"
+    private val notificationIconColor = Color.parseColor(notificationIconColorHex)
+    private val icon = R.drawable.ic_notification 
+    // private var notificationIconColor = 0
+    // private var icon = 0
+
     private var wakeLockTime = 60 * 60 * 1000L // 1 hour default wake lock time
     private var locatorClient: BLLocationProvider? = null
     internal lateinit var backgroundChannel: MethodChannel
