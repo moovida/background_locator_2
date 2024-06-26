@@ -71,7 +71,6 @@ class IsolateHolderService : MethodChannel.MethodCallHandler, LocationUpdateList
     private var notificationBigMsg =
         "Background location is on to keep the app up-tp-date with your location. This is required for main features to work properly when the app is not running."
     
-    private var icon = R.drawable.ic_notification 
     private var notificationIconColor = 0
     private var icon = 0
     private var notificationBreaks = 0
