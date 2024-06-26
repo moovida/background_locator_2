@@ -266,7 +266,11 @@ class IsolateHolderService : MethodChannel.MethodCallHandler, LocationUpdateList
         val notification = getNotification()
         val notificationManager =
             getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        notificationManager.notify(notificationId, notification)
+        try {
+            notificationManager.notify(notificationId, notification)
+        } catch (e: Exception) {
+            Log.e("background_locator_2", "Failed to send notification", e)
+        }
     }
 
     private fun getMainActivityClass(context: Context): Class<*>? {
